@@ -27,26 +27,26 @@ class {{cookiecutter.project_slug}}(PluginBase):
         # Define the plugin settings
         # This is the settings that will be shown in the UI for this plugin.
         self.settings_config: PluginSettings | None = PluginSettings(
-        key="{{cookiecutter.project_slug}}Plugin",
-        label="{{cookiecutter.project_name}}",
-        icon="waving_hand", # Uses Material Icons, like the built-in settings-tabs.
-        grids=[
-            SettingsGrid(
-                key="general",
-                label="General",
-                fields=[
-                    ToggleSetting(
-                        key="bool_setting",
-                        label="Boolean Setting",
-                        type="toggle",
-                        readonly = False,
-                        placeholder = None,
-                        default_value = False
-                    ),
-                ]
-            ),
-        ]
-    )
+            key="{{cookiecutter.project_slug}}Plugin",
+            label="{{cookiecutter.project_name}}",
+            icon="waving_hand", # Uses Material Icons, like the built-in settings-tabs.
+            grids=[
+                SettingsGrid(
+                    key="general",
+                    label="General",
+                    fields=[
+                        ToggleSetting(
+                            key="bool_setting",
+                            label="Boolean Setting",
+                            type="toggle",
+                            readonly = False,
+                            placeholder = None,
+                            default_value = False
+                        ),
+                    ]
+                ),
+            ]
+        )
     
     @override
     def register_actions(self, helper: PluginHelper):
