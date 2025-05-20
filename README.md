@@ -1,5 +1,5 @@
 
-# CORVAS:NEXT Plugin Template
+# COVAS:NEXT Plugin Template
 
 This project is a plugin template designed to provide a solid foundation for developing new plugins for [COVAS:NEXT](https://github.com/RatherRude/Elite-Dangerous-AI-Integration).
 ## Features
