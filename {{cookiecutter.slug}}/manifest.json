@@ -1,0 +1,8 @@
+{
+    "guid": "{{cookiecutter.guid}}",
+    "name": "{{cookiecutter.name}}",
+    "version": "{{cookiecutter.version}}",
+    "author": "{{cookiecutter.author}}",
+    "description": "{{cookiecutter.description}}",
+    "entrypoint": "{{cookiecutter.slug}}.py"
+}
