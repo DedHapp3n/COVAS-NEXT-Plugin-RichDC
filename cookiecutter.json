@@ -1,9 +1,18 @@
 {
-  "guid": "{{ uuid4() }}",
+  "__guid": "{{ uuid4() }}",
   "project_name": "Hello World",
   "project_slug": "{{ cookiecutter.project_name | title | replace(' ', '') | replace('_', '') | replace('-', '') }}",
   "project_slug_lower": "{{ cookiecutter.project_name.replace(' ', '_').lower() }}",
   "description": "A bare-bones COVAS:NEXT plugin.",
   "author": "Your Name",
-  "version": "0.0.1"
+  "repository": "https://github.com/{{ cookiecutter.author | title | replace(' ', '') | replace('_', '') | replace('-', '') }}/{{ cookiecutter.project_slug }}",
+  "version": "0.0.1",
+  "__prompts__": {
+    "project_name": "Project Name",
+    "project_slug": "Project Slug",
+    "project_slug_lower": "Lowercase Project Slug",
+    "description": "Description",
+    "author": "Author",
+    "version": "Version"
+  }
 }
