@@ -1,8 +1,8 @@
 {
     "guid": "{{cookiecutter.guid}}",
-    "name": "{{cookiecutter.name}}",
+    "name": "{{cookiecutter.project_name}}",
     "version": "{{cookiecutter.version}}",
     "author": "{{cookiecutter.author}}",
     "description": "{{cookiecutter.description}}",
-    "entrypoint": "{{cookiecutter.slug}}.py"
+    "entrypoint": "{{cookiecutter.project_slug}}.py"
 }

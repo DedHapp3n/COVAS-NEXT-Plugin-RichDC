@@ -14,11 +14,11 @@ if [ -f "requirements.txt" ]; then
 fi
 
 # Remember to add any additional files, and change the name of the plugin
-artifacts=("{{cookiecutter.slug}}.py" "requirements.txt" "manifest.json")
+artifacts=("{{cookiecutter.project_slug}}.py" "requirements.txt" "manifest.json")
 
 if [ -d "deps" ]; then
     artifacts+=("deps")
 fi
 
 # Create the zip archive
-zip -r -9 "dist/{{cookiecutter.slug}}.zip" "${artifacts[@]}"
+zip -r -9 "dist/{{cookiecutter.project_slug}}.zip" "${artifacts[@]}"

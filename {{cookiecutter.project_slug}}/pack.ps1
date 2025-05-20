@@ -12,7 +12,7 @@ if (Test-Path "requirements.txt") {
 }
 
 # Remember to add any additional files, and change the name of the plugin
-$artifacts = "{{cookiecutter.slug}}.py", "requirements.txt", "manifest.json"
+$artifacts = "{{cookiecutter.project_slug}}.py", "requirements.txt", "manifest.json"
 
 if (Test-Path "deps") {
     $artifacts += "deps"
@@ -21,6 +21,6 @@ if (Test-Path "deps") {
 $compress = @{
 LiteralPath = $artifacts
 CompressionLevel = "Fastest"
-DestinationPath = "dist\{{cookiecutter.slug}}Plugin.zip" # Change the name of the plugin
+DestinationPath = "dist\{{cookiecutter.project_slug}}Plugin.zip" # Change the name of the plugin
 }
 Compress-Archive @compress

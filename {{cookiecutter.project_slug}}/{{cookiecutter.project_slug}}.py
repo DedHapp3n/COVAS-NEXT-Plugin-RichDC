@@ -20,15 +20,15 @@ from lib.Event import Event, StatusEvent
 
 # Main plugin class
 # This is the class that will be loaded by the PluginManager.
-class {{cookiecutter.slug}}(PluginBase):
+class {{cookiecutter.project_slug}}(PluginBase):
     def __init__(self, plugin_manifest: PluginManifest):
         super().__init__(plugin_manifest)
 
         # Define the plugin settings
         # This is the settings that will be shown in the UI for this plugin.
         self.settings_config: PluginSettings | None = PluginSettings(
-        key="{{cookiecutter.slug}}Plugin",
-        label="{{cookiecutter.name}}",
+        key="{{cookiecutter.project_slug}}Plugin",
+        label="{{cookiecutter.project_name}}",
         icon="waving_hand", # Uses Material Icons, like the built-in settings-tabs.
         grids=[
             SettingsGrid(
@@ -51,10 +51,10 @@ class {{cookiecutter.slug}}(PluginBase):
     @override
     def register_actions(self, helper: PluginHelper):
         # Register actions
-        helper.register_action('{{cookiecutter.slug}}_get_version', "Returns the current version of the {{cookiecutter.name}} plugin.", {
+        helper.register_action('{{cookiecutter.project_slug_lower}}_get_version', "Returns the current version of the {{cookiecutter.project_name}} plugin.", {
             "type": "object",
             "properties": {}
-        }, self.{{cookiecutter.slug}}_get_version, 'global')
+        }, self.{{cookiecutter.project_slug_lower}}_get_version, 'global')
 
         log('debug', f"Actions registered for {self.plugin_manifest.name}")
         
@@ -89,7 +89,7 @@ class {{cookiecutter.slug}}(PluginBase):
         pass
 
     # Actions
-    def {{cookiecutter.slug}}_get_version(self, args, projected_states) -> str:
-        log('info', 'Hello World from {{cookiecutter.name}}!')
+    def {{cookiecutter.project_slug_lower}}_get_version(self, args, projected_states) -> str:
+        log('info', 'Hello World from {{cookiecutter.project_name}}!')
             
-        return f"Currently running {{cookiecutter.name}} version {self.plugin_manifest.version}."
+        return f"Currently running {{cookiecutter.project_name}} version {self.plugin_manifest.version}."
