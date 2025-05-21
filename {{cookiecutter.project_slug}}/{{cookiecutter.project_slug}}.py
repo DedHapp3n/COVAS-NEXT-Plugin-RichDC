@@ -1,22 +1,11 @@
-from typing import Any, Callable, Literal, TypedDict, cast, final, override
+from typing import override
 
-from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
-
-import openai
-from openai.types.chat import ChatCompletionMessageParam
-
-from lib.Config import Config
 from lib.PluginHelper import PluginHelper, PluginManifest
 from lib.PluginSettingDefinitions import PluginSettings, SettingsGrid, SelectOption, TextAreaSetting, TextSetting, SelectSetting, NumericalSetting, ToggleSetting, ParagraphSetting
-from lib.ScreenReader import ScreenReader
 from lib.Logger import log
-from lib.EDKeys import EDKeys
-from lib.EventManager import EventManager, Projection
-from lib.ActionManager import ActionManager
+from lib.EventManager import Projection
 from lib.PluginBase import PluginBase
-from lib.SystemDatabase import SystemDatabase
-from lib.Event import Event, StatusEvent
+from lib.Event import Event
 
 # Main plugin class
 # This is the class that will be loaded by the PluginManager.
