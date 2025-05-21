@@ -84,6 +84,11 @@ class {{cookiecutter.project_slug}}(PluginBase):
         pass
     
     @override
+    def on_plugin_helper_ready(self, helper: PluginHelper):
+        # Executed when the plugin helper is ready
+        pass
+    
+    @override
     def on_chat_stop(self, helper: PluginHelper):
         # Executed when the chat is stopped
         pass
