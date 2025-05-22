@@ -11,6 +11,7 @@
 
 ## Installation
 
+Download the latest release under the *Releases* section on the right.  
 Unpack the plugin into the `plugins` folder in COVAS:NEXT, leading to the following folder structure:
 * `plugins`
     * `{{cookiecutter.project_slug}}`
