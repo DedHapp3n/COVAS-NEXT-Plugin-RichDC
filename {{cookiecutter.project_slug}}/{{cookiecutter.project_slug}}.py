@@ -37,6 +37,8 @@ class {{cookiecutter.project_slug}}(PluginBase):
             ]
         )
     
+    # The following overrides are optional. Remove them if you don't need them.
+
     @override
     def register_actions(self, helper: PluginHelper):
         # Register actions
