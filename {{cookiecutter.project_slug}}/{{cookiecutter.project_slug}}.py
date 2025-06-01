@@ -11,7 +11,7 @@ from lib.Event import Event
 # This is the class that will be loaded by the PluginManager.
 class {{cookiecutter.project_slug}}(PluginBase):
     def __init__(self, plugin_manifest: PluginManifest):
-        super().__init__(plugin_manifest)
+        super().__init__(plugin_manifest) # If you use event classes, add them to a second parameter here, named event_classes. This is needed for deserialization from covas.db.
 
         # Define the plugin settings
         # This is the settings that will be shown in the UI for this plugin.
