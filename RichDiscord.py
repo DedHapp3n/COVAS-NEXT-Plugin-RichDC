@@ -9,15 +9,15 @@ from lib.Event import Event
 
 # Main plugin class
 # This is the class that will be loaded by the PluginManager.
-class {{cookiecutter.project_slug}}(PluginBase):
+class RichDiscord(PluginBase):
     def __init__(self, plugin_manifest: PluginManifest):
         super().__init__(plugin_manifest) # If you use event classes, add them to a second parameter here, named event_classes. This is needed for deserialization from covas.db.
 
         # Define the plugin settings
         # This is the settings that will be shown in the UI for this plugin.
         self.settings_config: PluginSettings | None = PluginSettings(
-            key="{{cookiecutter.project_slug}}Plugin",
-            label="{{cookiecutter.project_name}}",
+            key="RichDiscordPlugin",
+            label="RichDiscord",
             icon="waving_hand", # Uses Material Icons, like the built-in settings-tabs.
             grids=[
                 SettingsGrid(
@@ -42,10 +42,10 @@ class {{cookiecutter.project_slug}}(PluginBase):
     @override
     def register_actions(self, helper: PluginHelper):
         # Register actions
-        helper.register_action('{{cookiecutter.project_slug_lower}}_get_version', "Returns the current version of the {{cookiecutter.project_name}} plugin.", {
+        helper.register_action('richdiscord_get_version', "Returns the current version of the RichDiscord plugin.", {
             "type": "object",
             "properties": {}
-        }, self.{{cookiecutter.project_slug_lower}}_get_version, 'global')
+        }, self.richdiscord_get_version, 'global')
 
         log('debug', f"Actions registered for {self.plugin_manifest.name}")
         
@@ -85,7 +85,7 @@ class {{cookiecutter.project_slug}}(PluginBase):
         pass
 
     # Actions
-    def {{cookiecutter.project_slug_lower}}_get_version(self, args, projected_states) -> str:
-        log('info', 'Hello World from {{cookiecutter.project_name}}!')
+    def richdiscord_get_version(self, args, projected_states) -> str:
+        log('info', 'Hello World from RichDiscord!')
             
-        return f"Currently running {{cookiecutter.project_name}} version {self.plugin_manifest.version}."
+        return f"Currently running RichDiscord version {self.plugin_manifest.version}."

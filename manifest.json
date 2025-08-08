@@ -1,0 +1,9 @@
+{
+    "guid": "fd0d3a1a-1b75-40ac-ae1c-4a299a614111",
+    "name": "RichDiscord",
+    "version": "0.0.1",
+    "author": "DedHapp3n",
+    "repository": "https://github.com/DedHapp3n/COVAS-NEXT-Plugin-RichDC",
+    "description": "C:N Discord integtration",
+    "entrypoint": "RichDiscord.py"
+}

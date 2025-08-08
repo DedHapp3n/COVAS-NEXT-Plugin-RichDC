@@ -12,7 +12,7 @@ if (Test-Path "requirements.txt") {
 }
 
 # Remember to add any additional files, and change the name of the plugin
-$artifacts = "{{cookiecutter.project_slug}}.py", "requirements.txt", "manifest.json", "__init__.py"
+$artifacts = "RichDiscord.py", "requirements.txt", "manifest.json", "__init__.py"
 
 if (Test-Path "deps") {
     $artifacts += "deps"
@@ -21,6 +21,6 @@ if (Test-Path "deps") {
 $compress = @{
 LiteralPath = $artifacts
 CompressionLevel = "Fastest"
-DestinationPath = "dist\{{cookiecutter.project_slug}}Plugin.zip" # Change the name of the plugin
+DestinationPath = "dist\RichDiscordPlugin.zip" # Change the name of the plugin
 }
 Compress-Archive @compress

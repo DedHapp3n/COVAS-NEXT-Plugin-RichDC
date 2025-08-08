@@ -1,30 +1,37 @@
+# COVAS:NEXT RichDiscord
 
-# COVAS:NEXT Plugin Template
+C:N Discord integtration
 
-This project is a plugin template designed to provide a solid foundation for developing new plugins for [COVAS:NEXT](https://github.com/RatherRude/Elite-Dangerous-AI-Integration).
+
 ## Features
 
-- Valid manifest
-- .gitignore
-- Sample README.md
-- Python entrypoint file
-- Packaging scripts (For Linux and Windows).
+- Feature 1
+- Feature 2
 
 
-## Usage
+## Installation
 
-1. Install **cookiecutter** (`pip install cookiecutter`), if you haven't already.
-2. Clone the main [COVAS:NEXT](https://github.com/RatherRude/Elite-Dangerous-AI-Integration) repository and get it running.
-3. Open a terminal in the `plugins` sub-folder.
-4. Run `cookiecutter gh:MaverickMartyn/COVAS-NEXT-Plugin-Template` and follow the prompts.
-6. Happy coding!
+Download the latest release under the *Releases* section on the right.  
+Unpack the plugin into the `plugins` folder in COVAS:NEXT, leading to the following folder structure:
+* `plugins`
+    * `RichDiscord`
+        * `RichDiscord.py`
+        * `requirements.txt`
+        * `deps`
+        * `__init__.py`
+        * etc.
+    * `OtherPlugin`
 
-## Documentation
+# Development
+During development, clone the COVAS:NEXT repository and place your plugin-project in the plugins folder.  
+Install the dependencies to your local .venv virtual environment using `pip`, by running this command in the `RichDiscord` folder:
+```bash
+  pip install -r requirements.txt
+```
 
-[Documentation](https://ratherrude.github.io/Elite-Dangerous-AI-Integration/plugins/Development/)
-
-
+# Packaging
+Use the `./pack.ps1` or `./pack.sh` scripts to package the plugin and any Python dependencies in the `deps` folder.
+    
 ## Acknowledgements
 
  - [COVAS:NEXT](https://github.com/RatherRude/Elite-Dangerous-AI-Integration)
- - [My other projects](https://github.com/MaverickMartyn)

@@ -1,9 +1,0 @@
-{
-    "guid": "{{cookiecutter.__guid}}",
-    "name": "{{cookiecutter.project_name}}",
-    "version": "{{cookiecutter.version}}",
-    "author": "{{cookiecutter.author}}",
-    "repository": "{{cookiecutter.repository}}",
-    "description": "{{cookiecutter.description}}",
-    "entrypoint": "{{cookiecutter.project_slug}}.py"
-}

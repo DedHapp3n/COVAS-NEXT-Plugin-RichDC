@@ -15,7 +15,7 @@ fi
 
 # Remember to add any additional files, and change the name of the plugin
 artifacts=(
-    "{{cookiecutter.project_slug}}.py"
+    "RichDiscord.py"
     "requirements.txt"
     "manifest.json" "__init__.py"
 )
@@ -25,4 +25,4 @@ if [ -d "deps" ]; then
 fi
 
 # Create the zip archive
-zip -r -9 "dist/{{cookiecutter.project_slug}}.zip" "${artifacts[@]}"
+zip -r -9 "dist/RichDiscord.zip" "${artifacts[@]}"
