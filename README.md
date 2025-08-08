@@ -5,32 +5,8 @@ C:N Discord integtration
 
 ## Features
 
-- Feature 1
-- Feature 2
-
-
-## Installation
-
-Download the latest release under the *Releases* section on the right.  
-Unpack the plugin into the `plugins` folder in COVAS:NEXT, leading to the following folder structure:
-* `plugins`
-    * `RichDiscord`
-        * `RichDiscord.py`
-        * `requirements.txt`
-        * `deps`
-        * `__init__.py`
-        * etc.
-    * `OtherPlugin`
-
-# Development
-During development, clone the COVAS:NEXT repository and place your plugin-project in the plugins folder.  
-Install the dependencies to your local .venv virtual environment using `pip`, by running this command in the `RichDiscord` folder:
-```bash
-  pip install -r requirements.txt
-```
-
-# Packaging
-Use the `./pack.ps1` or `./pack.sh` scripts to package the plugin and any Python dependencies in the `deps` folder.
+- Activate it 
+- Create Logfile
     
 ## Acknowledgements
 
